@@ -39,7 +39,7 @@ CREATE TABLE success_killed(
   `seckill_id` BIGINT NOT NULL COMMENT '秒杀商品id',
   `user_phone` BIGINT NOT NULL COMMENT '用户手机号',
   `state` TINYINT NOT NULL DEFAULT -1 COMMENT '状态',
-  `create_time` TINYINT NOT NULL COMMENT '创建时间',
+  `create_time` TIMESTAMP NOT NULL DEFAULT current_timestamp COMMENT '创建时间',
   PRIMARY KEY (seckill_id, user_phone),
   KEY idx_create_time (create_time)
 )ENGINE = InnoDB DEFAULT CHARSET = utf8 COMMENT '秒杀成功明细表';
