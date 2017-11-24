@@ -63,17 +63,6 @@ public class SeckillServiceImpl implements SeckillService {
         return new Exposer(true, md5, seckillId);
     }
 
-    /**
-     * 加密md5
-     * @param seckillId
-     * @return
-     */
-    private String getMD5(long seckillId) {
-        String base = seckillId + "/" + slat;
-        String md5 = DigestUtils.md5DigestAsHex(base.getBytes());
-        return md5;
-    }
-
     @Transactional
     /**
      * 使用注解控制事务方法的优点：
@@ -109,5 +98,16 @@ public class SeckillServiceImpl implements SeckillService {
             logger.error(e.getMessage(), e);
             throw new SeckillException("seckill inner error:" + e.getMessage());
         }
+    }
+
+    /**
+     * 加密md5
+     * @param seckillId
+     * @return
+     */
+    private String getMD5(long seckillId) {
+        String base = seckillId + "/" + slat;
+        String md5 = DigestUtils.md5DigestAsHex(base.getBytes());
+        return md5;
     }
 }
