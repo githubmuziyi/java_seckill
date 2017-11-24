@@ -10,6 +10,7 @@
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
       <resolve-scope>imooc:</resolve-scope>
+      <unqualified-resolve-schemas>imooc:</unqualified-resolve-schemas>
     </data-source>
     <data-source name="MySQL - seckill@192.168.99.100" uuid="f4e4d802-7ece-4387-b99d-8b3c0cff3a18">
       <database-info product="MySQL" version="5.7.20" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.44 ( Revision: b3cda4f864902ffdde495b9df93937c3e20009be )">
@@ -19,7 +20,9 @@
       <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
+      <introspection-schemas>*:seckill</introspection-schemas>
       <resolve-scope>seckill:</resolve-scope>
+      <unqualified-resolve-schemas>seckill:</unqualified-resolve-schemas>
     </data-source>
     <data-source name="boot@127.0.0.1" uuid="a8143c1e-d3ea-48de-b27b-b3b3492db8e2">
       <database-info product="MySQL" version="5.7.17-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.44 ( Revision: b3cda4f864902ffdde495b9df93937c3e20009be )">

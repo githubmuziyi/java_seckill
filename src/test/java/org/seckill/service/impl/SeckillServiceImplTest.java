@@ -48,10 +48,10 @@ public class SeckillServiceImplTest {
         System.out.println(exposer);
     }
 
-    @Test
+    //@Test
     public void executeSeckill() throws Exception {
         long seckillId = 1000L;
-        long userPhone = 13677885631L;
+        long userPhone = 13677885461L;
         String md5 = "fwefwefwefwef";
         SeckillExecution seckillExecution = seckillService.executeSeckill(seckillId, userPhone, md5);
         System.out.println(seckillExecution);
